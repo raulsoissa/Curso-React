@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {
     CLOUD, CLOUDY, SUN, RAIN, SNOW, WINDY,
 } from './../../../constants/weathers';
+import './styles.css';
 
 const icons = {
     [CLOUD] : "801",
@@ -15,15 +16,19 @@ const icons = {
 };
 const getWeatherIcon = weatherState => {
     const icon = icons[weatherState];
+
+    const sizeIcon = "4x" 
+
     if (icon)
-        return <WeatherIcon name="owm" iconId={icon}/>
+        return <WeatherIcon className="wicon" name="owm" iconId={icon} size={sizeIcon}/>
     else 
-        return <WeatherIcon name="owm" iconId={"200"}/>
+        return <WeatherIcon className="wicon" name="owm" iconId={"200"} size={sizeIcon}/>
 };
 const WeatherTemperature = ({ temperature, weatherState}) => (
-    <div>
+    <div className="weatherTemperatureCont">
         {getWeatherIcon(weatherState)} 
-        <span>{`${temperature} C°`}</span>
+        <span className="temperature">{`${temperature}`}</span> 
+        <span className="temperatureType">{` C°`}</span>
     </div>
 );
 
