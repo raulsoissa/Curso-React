@@ -3,7 +3,6 @@ import { CircularProgress } from '@material-ui/core';
 import { PropTypes } from 'prop-types';
 import getUrlWeatherByCity from './../../services/getUrlWeatherByCity';
 import transformWeather from './../../services/transformWeather';
-import { api_weather} from './../../constants/api_url';
 import WeatherData from './WeatherData/index';
 import Location from './Location';
 import './styles.css';
@@ -61,7 +60,7 @@ class WeatherLocation extends Component {
     }  
 };
 
-WeatherLocation.prototypes = {
+WeatherLocation.propTypes = {
     city: PropTypes.string.isRequired,
     onWeatherLocationClick: PropTypes.func,
 }
