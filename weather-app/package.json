@@ -11,6 +11,7 @@
     "prop-types": "^15.7.2",
     "react": "16.7.0",
     "react-dom": "16.7.0",
+    "react-flexbox-grid": "^2.1.2",
     "react-icons-weather": "^1.0.5",
     "react-scripts": "3.4.1",
     "react-weathericons": "^1.0.4"
