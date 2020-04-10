@@ -6,3 +6,12 @@
         margin-bottom: 20px;
     }
 }
+
+.forecast-title {
+    color: white;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-bottom: 3px solid #fe4018;
+    text-align: center;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
